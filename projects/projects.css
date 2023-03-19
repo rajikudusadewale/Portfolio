@@ -1,0 +1,104 @@
+
+
+:root {
+    --secondary: #3D3B67;
+    --primary: #06AFD1;
+    --white: #D9D9D9;
+
+}
+
+.blog-hero h1 {
+    color: var(--white);
+}
+
+.blog-hero {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/projectsbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding: 90px 10%;
+}
+
+.hr-analytics {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/projects/assets/hr-analytics.png);
+}
+
+.automobile {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/automobile.png);
+}
+
+.ambor {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/projects/assets/ambor.png);
+}
+
+.ethusd {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/projects/assets/ethusd.png);
+}
+
+.student {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/student-perfomance.jpeg);
+}
+
+.remote {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/remote\ sensing.jpg);
+}
+
+.spartial {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/spartial\ data\ analysis.png);
+}
+
+.titanic {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/titanic\ eda.jpg);
+}
+
+.southwest {
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/southwest\ precipitation.png);
+}
+
+.lang2 {
+    justify-content: flex-start;
+}
+
+.article {
+    background: var(--white);
+}
+
+.article p {
+    color: var(--secondary);
+}
+
+.article h3 {
+    text-align: unset;
+    color: var(--secondary);
+}
+
+.blog-img {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.blog-img a, .blog-link a {
+    color: var(--secondary);
+}
+
+img {
+    width: 80%;
+    max-width: max-content;
+}
+
+figcaption {
+    color: var(--secondary);
+    font-size: small;
+}
+
+.blog li, .blog li {
+    margin-left: 35px;
+}
+
+.blog li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160.02%;
+    color: var(--secondary);
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Primary Meta Tags -->
+
+    <meta name="title" content="Spartial Data Analysis by Raji
+    Kudus Adewale">
+    <meta name="description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.akraji.com/projects/spartial-data-analysis.html">
+    <meta property="og:title" content="Spartial Data Analysis by Raji
+    Kudus Adewale">
+    <meta property="og:description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.akraji.com/projects/spartial-data-analysis.html">
+    <meta property="twitter:title" content="Spartial Data Analysis by Raji
+    Kudus Adewale">
+    <meta property="twitter:description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    <meta property="twitter:image" content="">
+
+
+    <meta name="theme-color" content="#3D3B67">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartial Data Analysis | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"> -->
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a class="logo" href="https://www.akraji.com/">
+                <h2>Raji.</h2>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../projects">WORKS</a></li>
+                    <li><a href="../contact">CONTACT ME</a></li>
+                    <li><a href="">RESUME</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <nav class="nav-mobile">          
+            <ul>
+                <li><a href="../projects">WORKS</a></li>
+                <li><a href="../contact">CONTACT ME</a></li>
+                <li><a href="">RESUME</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-hero spartial">
+        <h1>
+            Spartial Data Analysis
+        </h1>
+        <div class="lang lang2">
+            <!-- <small>
+                Python
+            </small> -->
+            <small>
+                R
+            </small>
+            <!-- <small>
+                Power BI
+            </small> -->
+            <!-- <small>
+                Excel
+            </small> -->
+            <!-- <small>
+                SQL
+            </small> -->
+        </div>
+    </section>
+
+    <section class="article">
+        <article>
+            <h2 class="title">
+                Spatial Data Analysis and Visualization in R
+            </h2>
+
+            <ol class="blog">
+                <li>Intro-</li>
+                <li>Finding relationships of spatial data</li>
+                <li>Maps making using tmap library</li>
+                <li>Using R as a GIS tool.</li>
+                <li>Density Analysis.</li>
+                <li>Spatial autocorrelation.</li>
+                <li>Geographically weighted regressions.</li>
+            </ol><br>
+
+
+            <deckgo-highlight-code language="r">
+                <code slot="code">
+#adding borders # tm_borders() range from 0-1
+# add borders
+tm_shape(OA.Census) + tm_fill("Qualification", palette = "Reds") + 
+  tm_borders(alpha=.4)
+
+# Addding a north Arrow #tm_compass()
+# north arrow
+tm_shape(OA.Census) + tm_fill("Qualification", palette = "Reds") + 
+  tm_borders(alpha=.4) +
+  tm_compass()
+
+# Editing the layout of the map # tm_layout(), also inside tm_fill()
+# adds in layout, gets rid of frame
+tm_shape(OA.Census) + tm_fill("Qualification", palette = "Reds", style = "quantile", title = "% with a Qualification") + 
+  tm_borders(alpha=.4) + 
+  tm_compass() + 
+  tm_layout(title = "Camden, London", legend.text.size = 1.1, legend.title.size = 1.4, legend.position = c("right", "top"), frame = FALSE) 
+                    
+################ SAVING THE SHAPEFILE ###########
+writeOGR(OA.Census, dsn = 'OA.Census Shapefile', layer = "Census_OA_Shapefile", driver="ESRI Shapefile")
+                </code>
+            </deckgo-highlight-code><br>
+
+            <deckgo-highlight-code language="python">
+                <code slot="code">
+### Observing column names ######
+
+colnames(Ethnicity)
+Ethnicity <- Ethnicity[, c(1,21)]
+Rooms <- Rooms[, c(1,13)]
+Qualifications <- Qualifications[, c(1,20)]
+Employment <- Employment[, c(1,20)]
+                    
+##### Renaming column headers ######
+# to change an individual column name
+#names(Employment)[2] <- "Unemployed"
+                    
+# to change many column names
+                    
+names(Ethnicity) <- c('OA', 'White_British')
+names(Rooms) <- c('OA', 'Low_Occupancy')
+names(Employment)<- c('OA', 'Unemployed')
+names(Qualifications) <- c('OA', 'Qualification')
+                </code>
+            </deckgo-highlight-code><br>
+
+            <deckgo-highlight-code language="python">
+                <code slot="code">
+#### TO PLOT HEATMAP USING QPLOT() FUNC ####
+
+library(reshape2)
+corr <- cor(data1)
+
+# creates a qplot from our corr matrix
+qplot(x=Var1, y=Var2, data=melt(corr), fill=value, geom="tile") +
+  scale_fill_gradient2(limits=c(-1, 1))
+library(corrplot)
+
+# creates a lower triangular corrplot from our corr matrix. enable plot very easy
+corrplot(corr, type="lower", tl.col="black", tl.srt=45)
+                </code>
+            </deckgo-highlight-code><br>
+
+            
+        </article>
+
+        <div class="btn">
+            <a type="button" target="_blank" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis" class="sec-btn">Continue reading</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+    <footer>
+        <small>
+            © Raji Kudus Adewale 2023
+        </small>
+    </footer>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+<script src="../script.js"></script>
+</html>

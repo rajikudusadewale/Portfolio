@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Primary Meta Tags -->
+
+    <meta name="title" content="Titanic EDA by Raji
+    Kudus Adewale">
+    <meta name="description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.akraji.com/projects/titanic-eda.html">
+    <meta property="og:title" content="Titanic EDA by Raji
+    Kudus Adewale">
+    <meta property="og:description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.akraji.com/projects/titanic-eda.html">
+    <meta property="twitter:title" content="Titanic EDA by Raji
+    Kudus Adewale">
+    <meta property="twitter:description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    <meta property="twitter:image" content="">
+
+
+    <meta name="theme-color" content="#3D3B67">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic EDA | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"> -->
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a class="logo" href="https://www.akraji.com/">
+                <h2>Raji.</h2>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../projects">WORKS</a></li>
+                    <li><a href="../contact">CONTACT ME</a></li>
+                    <li><a href="">RESUME</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <nav class="nav-mobile">          
+            <ul>
+                <li><a href="../projects">WORKS</a></li>
+                <li><a href="../contact">CONTACT ME</a></li>
+                <li><a href="">RESUME</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-hero titanic">
+        <h1>
+            Titanic EDA
+        </h1>
+        <div class="lang lang2">
+            <!-- <small>
+                Python
+            </small> -->
+            <small>
+                R
+            </small>
+            <!-- <small>
+                Power BI
+            </small> -->
+            <!-- <small>
+                Excel
+            </small> -->
+            <!-- <small>
+                SQL
+            </small> -->
+        </div>
+    </section>
+
+    <section class="article">
+        <article>
+            <h2 class="title">
+                Titanic-EDA (codes)
+            </h2>
+            <p>
+                Exploratory Data Analysis (EDA) is an approach to analyzing and summarizing data that is used to understand its main features and patterns. EDA is typically used in the early stages of data analysis, to gain a deeper understanding of the data and to identify potential relationships or trends that can be explored in further detail.
+            </p><br>            
+            
+            <p>
+                The Titanic dataset contains information about passengers on the Titanic, including their demographics, cabin class, fare paid, and whether they survived the disaster
+            </p>br
+
+            <p>
+                Based on the exploratory data analysis (EDA) performed on the Titanic dataset, the following conclusions and insights can be drawn
+            </p><br>
+
+
+            <ol class="blog">
+                <li>The majority of the passengers were in third class, with only a small percentage in first class.</li>
+                <li>The survival rate of passengers in first class was higher than those in second and third class.</li>
+                <li>Female passengers had a much higher survival rate than male passengers.</li>
+                <li>Passengers with family members onboard had a higher survival rate than those who were traveling alone.</li>
+            </ol><br>
+
+
+            <deckgo-highlight-code language="r">
+                <code slot="code">
+#
+# Exploratory Data Analysis of Titanic Incident #
+# Data Source: Kaggle
+
+# Importing R libaries
+
+library(tidyverse)
+
+# The data has been sorted into Train data and Test data
+
+train <- read.csv('train.csv',header = TRUE, stringsAsFactors = FALSE,na.strings = c('','NA',''))
+test <- read.csv('test.csv',stringsAsFactors = FALSE, na.strings = c('','NA',''))
+head(train)
+view(train)
+str(train)
+str(test)
+test$Survived <- 0
+table(train$Sex, train$Survived)
+prop.table(table(train$Sex, train$Survived))
+                </code>
+            </deckgo-highlight-code><br>
+
+            <deckgo-highlight-code language="python">
+                <code slot="code">
+test <- test %>% select(-Survived) # to remove the added Survived col
+test_1 <- test
+test_1$Survived <- 0
+test_1$Survived[test_1$Sex == 'female'] <- 1
+str(test_1)
+
+# test_1 %>% count(Sex)
+# table(test_1$Sex)
+
+my_sol <- data.frame(passengerID = test_1$PassengerId, Survived = test_1$Survived)
+# view(my_sol) 
+# write.csv(my_sol,'my_first_titan.csv')
+                </code>
+            </deckgo-highlight-code><br>
+
+            
+        </article>
+
+        <div class="btn">
+            <a type="button" target="_blank" href="https://github.com/rajikudusadewale/Titanic-EDA" class="sec-btn">Continue reading</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+    <footer>
+        <small>
+            © Raji Kudus Adewale 2023
+        </small>
+    </footer>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+<script src="../script.js"></script>
+</html>

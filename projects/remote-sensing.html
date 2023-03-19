@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Primary Meta Tags -->
+
+    <meta name="title" content="Remote Sensing Indices by Raji
+    Kudus Adewale">
+    <meta name="description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.akraji.com/projects/remote-sensing.html">
+    <meta property="og:title" content="Remote Sensing Indices by Raji
+    Kudus Adewale">
+    <meta property="og:description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.akraji.com/projects/remote-sensing.html">
+    <meta property="twitter:title" content="Remote Sensing Indices by Raji
+    Kudus Adewale">
+    <meta property="twitter:description" content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making">
+    <meta property="twitter:image" content="">
+
+
+    <meta name="theme-color" content="#3D3B67">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Sensing Indices | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"> -->
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a class="logo" href="https://www.akraji.com/">
+                <h2>Raji.</h2>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../projects">WORKS</a></li>
+                    <li><a href="../contact">CONTACT ME</a></li>
+                    <li><a href="">RESUME</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <nav class="nav-mobile">          
+            <ul>
+                <li><a href="../projects">WORKS</a></li>
+                <li><a href="../contact">CONTACT ME</a></li>
+                <li><a href="">RESUME</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-hero remote">
+        <h1>
+            Remote Sensing Indices
+        </h1>
+        <div class="lang lang2">
+            <!-- <small>
+                Python
+            </small> -->
+            <small>
+                R
+            </small>
+            <!-- <small>
+                Power BI
+            </small> -->
+            <!-- <small>
+                Excel
+            </small> -->
+            <!-- <small>
+                SQL
+            </small> -->
+        </div>
+    </section>
+
+    <section class="article">
+        <article>
+            <h2 class="title">
+                Normalized Difference Vegetation Index (NDVI), Normalized Difference Water Index (NDWI)
+            </h2>
+
+            <h3>
+                Project: Spatio-Temporal Analysis.
+            </h3><br>
+            
+            <p>
+                <strong>Overview:</strong> Used R to automate and carried out spatio-temporal analysis. To measure vegetation and water content, two remote sensing indices were carried out, namely; Normalized Difference vegetation index (NDVI), and Normalized Difference water index (NDWI) using Landsat 7 & 5 Imageries of 1999, 2008, and 2018 for dry and wet seasons.
+            </p><br>            
+            
+            <p>
+                <strong>Study Area:</strong> Kainji Lake, Nigeria
+            </p><br>
+
+            <p class="blog-link">
+                <strong>Data Source:</strong> United States Geological Surveys <a target="_blank" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>
+            </p><br>
+
+
+            <p>
+                <strong>NDVI</strong> and <strong>NDWI</strong> are two different indices used to analyze remote sensing data, often from satellite imagery, to measure vegetation and water content respectively.
+            </p><br>
+
+            <p>
+                <strong>NDVI</strong> stands for "Normalized Difference Vegetation Index". It is calculated using near-infrared (NIR) and red light bands from remote sensing data and provides a measure of the amount and health of vegetation in an area. NDVI values range from -1 to 1, with higher values indicating a greater amount of healthy vegetation.
+            </p><br>
+
+            
+
+
+            <deckgo-highlight-code language="r">
+                <code slot="code">
+# plot NDVI Map 
+plot(NDVI_507_L08,
+     main = "NDVI of the Kainji Lake, 2019",
+     axes = FALSE, box = TRUE)
+
+     # coord_equal(xlim = c(15, 34), ylim = c(-36, -26), expand = 0))
+    
+
+# plot(NDVI_L07_18753_0208_NW,
+#      main = "NDVI of the Study Area Dry Season, 2008",
+#      axes = FALSE, box = FALSE,
+#      coord_equal(xlim = c(15, 34), ylim = c(-36, -26), expand = 0))
+
+ # Export as tif
+writeRaster(x =NDVI_507_L08,
+            filename= "NDVI_507_L08.tif",
+            format = "GTiff", # save as a tif
+            overwrite = TRUE)
+                </code>
+            </deckgo-highlight-code><br>
+
+            <deckgo-highlight-code language="python">
+                <code slot="code">
+# NDVI histo
+hist(NDVI_507_L08, 
+     main = "NDVI: Distribution of pixels \n Kainji Lake @ 2008",
+     col = "Red",
+     xlab = "NDVI Index Value")
+
+# hist(NDVI_L07_19753_1008, 
+#      main = "NDVI: Distribution of pixels \n Wet Season 2008",
+#      col = "Dark green",
+#      xlab = "NDVI Index Value")
+                </code>
+            </deckgo-highlight-code><br>
+
+            
+        </article>
+
+        <div class="btn">
+            <a type="button" target="_blank" href="https://github.com/rajikudusadewale/Remote-Sensing-Indices" class="sec-btn">Continue reading</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+    <footer>
+        <small>
+            © Raji Kudus Adewale 2023
+        </small>
+    </footer>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+<script src="../script.js"></script>
+</html>
