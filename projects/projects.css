@@ -21,7 +21,7 @@
 }
 
 .hr-analytics {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/projects/assets/hr-analytics.png);
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/HR-Analytics.jpg);
 }
 
 .automobile {
@@ -29,11 +29,11 @@
 }
 
 .ambor {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/projects/assets/ambor.png);
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/sales\ analytics.png);
 }
 
 .ethusd {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/projects/assets/ethusd.png);
+    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/ETH-USD.jpg);
 }
 
 .student {
