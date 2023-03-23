@@ -1,108 +1,151 @@
-
-
 :root {
-    --secondary: #3D3B67;
-    --primary: #06AFD1;
-    --white: #D9D9D9;
-
+  --secondary: #3d3b67;
+  --primary: #06afd1;
+  --white: #d9d9d9;
 }
 
 .blog-hero h1 {
-    color: var(--white);
+  color: var(--white);
 }
 
 .blog-hero {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/projectsbg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/projectsbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-    padding: 90px 10%;
+  padding: 90px 10%;
 }
 
 .hr-analytics {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/HR-Analytics.jpg);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/HR-Analytics.jpg);
 }
 
 .automobile {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/automobile.png);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/automobile.png);
 }
 
 .ambor {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/sales\ analytics.png);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/sales\ analytics.png);
 }
 
 .ethusd {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/ETH-USD.jpg);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/ETH-USD.jpg);
 }
 
 .student {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/student-perfomance.jpeg);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/student-perfomance.jpeg);
 }
 
 .remote {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/remote\ sensing.jpg);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/remote\ sensing.jpg);
 }
 
 .spatial {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/spatial\ data\ analysis.png);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/spatial\ data\ analysis.png);
 }
 
 .titanic {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/titanic\ eda.jpg);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/titanic\ eda.jpg);
 }
 
 .southwest {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/southwest\ precipitation.png);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/southwest\ precipitation.png);
 }
 
 .btcusd {
-    background-image: linear-gradient(rgba(61,59,103, 0.8) 70%, rgba(61,59,103, 0.8) 70%), url(/assets/featuredIMG/BTCUSD.jpg);
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/BTCUSD.jpg);
 }
 
 .lang2 {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .article {
-    background: var(--white);
+  background: var(--white);
 }
 
 .article p {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .article h3 {
-    text-align: unset;
-    color: var(--secondary);
+  text-align: unset;
+  color: var(--secondary);
 }
 
 .blog-img {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
-.blog-img a, .blog-link a {
-    color: var(--secondary);
+.blog-img a,
+.blog-link a {
+  color: var(--secondary);
 }
 
 img {
-    width: 80%;
-    max-width: max-content;
+  width: 80%;
+  max-width: max-content;
 }
 
 figcaption {
-    color: var(--secondary);
-    font-size: small;
+  color: var(--secondary);
+  font-size: small;
 }
 
-.blog li, .blog li {
-    margin-left: 35px;
+.blog li,
+.blog li {
+  margin-left: 35px;
 }
 
 .blog li {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160.02%;
-    color: var(--secondary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160.02%;
+  color: var(--secondary);
 }
