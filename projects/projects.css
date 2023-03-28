@@ -101,6 +101,14 @@
     url(/assets/featuredIMG/BTCUSD.jpg);
 }
 
+.order {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/order.jpg);
+}
+
 .lang2 {
   justify-content: flex-start;
 }
