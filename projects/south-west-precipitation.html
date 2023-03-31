@@ -156,29 +156,56 @@
 
         <deckgo-highlight-code language="r">
           <code slot="code">
-            ##########################################################################################
-            ## Lagos State<>Oyo State<>OgunState<>Osun State<>Ondo State<>Ekiti
-            State ##
-            ##########################################################################################
-            library(tidyverse) library(readxl) rain1 <-
-            read_excel('SouthWest2.xlsx',sheet = 1, col_names = TRUE)
-            View(rain1) #####################3 s1 <- rain1 %>% mutate(year =
-            as.numeric(format(rain1$DATE, format = "%Y")))%>% group_by(year ==
-            '1986')%>% summarize(annual_sum = mean(mm))
+##########################################################################################
+## Lagos State<>Oyo State<>OgunState<>Osun State<>Ondo State<>Ekiti State               ##
+##########################################################################################
+library(tidyverse)
+library(readxl)
+rain1 <- read_excel('SouthWest2.xlsx',sheet = 1, col_names = TRUE)
+View(rain1)
+#####################3
+s1 <- rain1 %>%
+  mutate(year = as.numeric(format(rain1$DATE, format = "%Y")))%>%
+  group_by(year == '1986')%>%
+  summarize(annual_sum = mean(mm))
+View(s1)
+mean(s1$annual_sum) 
+#####################
+# s2
+rain2 <- read_excel('SouthWest2.xlsx',sheet = 2, col_names = TRUE)
+s2 <- rain2 %>%
+  mutate(year = as.numeric(format(rain2$DATE, format = "%Y")))%>%
+  group_by(year)%>%
+  summarize(annual_sum = sum(mm))
           </code> </deckgo-highlight-code
         ><br />
 
         <deckgo-highlight-code language="python">
           <code slot="code">
-            View(s1) mean(s1$annual_sum) ##################### # s2 rain2 <-
-            read_excel('SouthWest2.xlsx',sheet = 2, col_names = TRUE) s2 <-
-            rain2 %>% mutate(year = as.numeric(format(rain2$DATE, format =
-            "%Y")))%>% group_by(year)%>% summarize(annual_sum = sum(mm))
-            View(s2) mean(s2$annual_sum) #1150.703 #s3 rain3 <-
-            read_excel('SouthWest2.xlsx',sheet = 3, col_names = TRUE) s3 <-
-            rain3 %>% mutate(year = as.numeric(format(rain3$DATE, format =
-            "%Y")))%>% group_by(year)%>% summarize(annual_sum = sum(mm))
-            mean(s3$annual_sum) #1161.172
+#s5
+rain5 <- read_excel('SouthWest2.xlsx',sheet = 5, col_names = TRUE)
+s5 <- rain5 %>%
+  mutate(year = as.numeric(format(rain5$DATE, format = "%Y")))%>%
+  group_by(year)%>%
+  summarize(annual_sum = sum(mm))
+mean(s5$annual_sum) #1154.908
+View(s5)
+#s6
+rain6 <- read_excel('SouthWest2.xlsx',sheet = 6, col_names = TRUE)
+s6 <- rain6 %>%
+  mutate(year = as.numeric(format(rain6$DATE, format = "%Y")))%>%
+  group_by(year)%>%
+  summarize(annual_sum = sum(mm))
+mean(s6$annual_sum) #1155.077
+View(s6)
+#s7
+rain7 <- read_excel('SouthWest2.xlsx',sheet = 7, col_names = TRUE)
+s7 <- rain7 %>%
+  mutate(year = as.numeric(format(rain7$DATE, format = "%Y")))%>%
+  group_by(year)%>%
+  summarize(annual_sum = sum(mm))
+mean(s7$annual_sum) #1343.921
+View(s7)
           </code> </deckgo-highlight-code
         ><br />
       </article>

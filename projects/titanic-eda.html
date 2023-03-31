@@ -166,26 +166,47 @@
 
         <deckgo-highlight-code language="r">
           <code slot="code">
-            # # Exploratory Data Analysis of Titanic Incident # # Data Source:
-            Kaggle # Importing R libaries library(tidyverse) # The data has been
-            sorted into Train data and Test data train <-
-            read.csv('train.csv',header = TRUE, stringsAsFactors =
-            FALSE,na.strings = c('','NA','')) test <-
-            read.csv('test.csv',stringsAsFactors = FALSE, na.strings =
-            c('','NA','')) head(train) view(train) str(train) str(test)
-            test$Survived <- 0 table(train$Sex, train$Survived)
-            prop.table(table(train$Sex, train$Survived))
+# The data has been sorted into Train data and Test data
+
+train <- read.csv('train.csv',header = TRUE, stringsAsFactors = FALSE,na.strings = c('','NA',''))
+test <- read.csv('test.csv',stringsAsFactors = FALSE, na.strings = c('','NA',''))
+head(train)
+view(train)
+str(train)
+str(test)
+test$Survived <- 0
+table(train$Sex, train$Survived)
+prop.table(table(train$Sex, train$Survived))
+
+test <- test %>% select(-Survived) # to remove the added Survived col
+test_1 <- test
+test_1$Survived <- 0
+test_1$Survived[test_1$Sex == 'female'] <- 1
+str(test_1)
           </code> </deckgo-highlight-code
         ><br />
 
         <deckgo-highlight-code language="python">
           <code slot="code">
-            test <- test %>% select(-Survived) # to remove the added Survived
-            col test_1 <- test test_1$Survived <- 0 test_1$Survived[test_1$Sex
-            == 'female'] <- 1 str(test_1) # test_1 %>% count(Sex) #
-            table(test_1$Sex) my_sol <- data.frame(passengerID =
-            test_1$PassengerId, Survived = test_1$Survived) # view(my_sol) #
-            write.csv(my_sol,'my_first_titan.csv')
+# train & test splitting
+
+cleaned_train<- full[1:891,]
+cleaned_test<- full[892:1309,]
+
+#data exploration (Visualization)
+
+ggplot(cleaned_train,aes(x = Sex, fill = factor(Survived)))+
+  geom_bar()
+
+ggplot(cleaned_train, aes(x = Sex, fill = factor(Survived))) +
+  theme_bw()+
+  facet_wrap(~ Pclass)+
+  geom_bar()+
+  labs(y = "Passenger Count", 
+       title = "Survival rate by Pclass & Gender")
+
+# ggplot(cleaned_train, aes(x = Fare))+ geom_histogram()
+ggplot(cleaned_train)+geom_histogram(aes(x=Fare), fill = 'white', colour = 'black')
           </code> </deckgo-highlight-code
         ><br />
       </article>
