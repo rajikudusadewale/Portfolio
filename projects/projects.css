@@ -101,6 +101,14 @@
     url(/assets/featuredIMG/BTCUSD.jpg);
 }
 
+.bike {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/BMW\ Motorrad.webp);
+}
+
 .order {
   background-image: linear-gradient(
       rgba(61, 59, 103, 0.8) 70%,
