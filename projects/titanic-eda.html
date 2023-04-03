@@ -121,94 +121,50 @@
 
     <section class="article">
       <article>
-        <h2 class="title">Titanic-EDA (codes)</h2>
+        <h2 class="title">Exploratory Data Analysis on Titanic Incident</h2>
+
+        <h3>Exploratory Data Analysis (EDA)</h3>
         <p>
-          Exploratory Data Analysis (EDA) is an approach to analyzing and
-          summarizing data that is used to understand its main features and
-          patterns. EDA is typically used in the early stages of data analysis,
-          to gain a deeper understanding of the data and to identify potential
-          relationships or trends that can be explored in further detail.
+          This is an approach to analyzing and summarizing data that is used to understand its main features and patterns. EDA is typically used in the early stages of data analysis, to gain a deeper understanding of the data and to identify potential relationships or trends that can be explored in further detail.
         </p>
         <br />
 
         <p>
-          The Titanic dataset contains information about passengers on the
-          Titanic, including their demographics, cabin class, fare paid, and
-          whether they survived the disaster
-        </p>
-        br
+          The Titanic dataset contains information about passengers on the Titanic, including their demographics, cabin class, fare paid, and whether they survived the disaster.
+        </p><br>
+
+        <div class="blog-img">
+          <img src="/projects/assets/Report SS.jpg" alt="ETH-USD dashboard" />
+          <figcaption>
+            Exploratory Data Analysis
+          </figcaption>
+        </div><br>
 
         <p>
-          Based on the exploratory data analysis (EDA) performed on the Titanic
-          dataset, the following conclusions and insights can be drawn
+          Based on the exploratory data analysis (EDA) performed on the Titanic dataset, the following conclusions and insights can be drawn
         </p>
         <br />
 
         <ol class="blog">
           <li>
-            The majority of the passengers were in third class, with only a
-            small percentage in first class.
+            The majority of the passengers were in third class, with only a small percentage in first class.
           </li>
           <li>
-            The survival rate of passengers in first class was higher than those
-            in second and third class.
+            The survival rate of passengers in first class was higher than those in second and third class.
           </li>
           <li>
-            Female passengers had a much higher survival rate than male
-            passengers.
+            Female passengers had a much higher survival rate than male passengers.
           </li>
           <li>
-            Passengers with family members onboard had a higher survival rate
-            than those who were traveling alone.
+            Passengers with family members onboard had a higher survival rate than those who were traveling alone.
+          </li>
+          <li>
+            The age distribution of passengers was skewed towards younger passengers, with a large number of passengers under the age of 30.
           </li>
         </ol>
         <br />
 
-        <deckgo-highlight-code language="r">
-          <code slot="code">
-# The data has been sorted into Train data and Test data
-
-train <- read.csv('train.csv',header = TRUE, stringsAsFactors = FALSE,na.strings = c('','NA',''))
-test <- read.csv('test.csv',stringsAsFactors = FALSE, na.strings = c('','NA',''))
-head(train)
-view(train)
-str(train)
-str(test)
-test$Survived <- 0
-table(train$Sex, train$Survived)
-prop.table(table(train$Sex, train$Survived))
-
-test <- test %>% select(-Survived) # to remove the added Survived col
-test_1 <- test
-test_1$Survived <- 0
-test_1$Survived[test_1$Sex == 'female'] <- 1
-str(test_1)
-          </code> </deckgo-highlight-code
-        ><br />
-
-        <deckgo-highlight-code language="python">
-          <code slot="code">
-# train & test splitting
-
-cleaned_train<- full[1:891,]
-cleaned_test<- full[892:1309,]
-
-#data exploration (Visualization)
-
-ggplot(cleaned_train,aes(x = Sex, fill = factor(Survived)))+
-  geom_bar()
-
-ggplot(cleaned_train, aes(x = Sex, fill = factor(Survived))) +
-  theme_bw()+
-  facet_wrap(~ Pclass)+
-  geom_bar()+
-  labs(y = "Passenger Count", 
-       title = "Survival rate by Pclass & Gender")
-
-# ggplot(cleaned_train, aes(x = Fare))+ geom_histogram()
-ggplot(cleaned_train)+geom_histogram(aes(x=Fare), fill = 'white', colour = 'black')
-          </code> </deckgo-highlight-code
-        ><br />
+        
       </article>
 
       <div class="btn">
