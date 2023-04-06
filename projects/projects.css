@@ -117,6 +117,14 @@
     url(/assets/featuredIMG/order.jpg);
 }
 
+.hotel {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/hotel\ revenue\ data.webp);
+}
+
 .lang2 {
   justify-content: flex-start;
 }
@@ -140,7 +148,7 @@
 }
 
 .blog-img a,
-.blog-link a {
+.blog-link a, .b-link {
   color: var(--secondary);
 }
 

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Primary Meta Tags -->
+
+    <meta
+      name="title"
+      content="Hotel's Revenue Data Analytics by Raji
+    Kudus Adewale"
+    />
+    <meta
+      name="description"
+      content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.akraji.com/projects/hotels-revenue-data-analytics.html"
+    />
+    <meta
+      property="og:title"
+      content="Hotel's Revenue Data Analytics by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="og:description"
+      content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.akraji.com/projects/hotels-revenue-data-analytics.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Hotel's Revenue Data Analytics by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="twitter:description"
+      content="A Professional data analyst who focuses on employing Python, R, Power BI, Excel, and SQL tools to transform complex data sets into actionable insights that drive informed decision-making"
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <meta name="theme-color" content="#3D3B67" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel's Revenue Data Analytics | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a class="logo" href="https://www.akraji.com/">
+          <h2>Raji.</h2>
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="../projects">WORKS</a></li>
+            <li><a href="../contact">CONTACT ME</a></li>
+            <li><a href="">RESUME</a></li>
+          </ul>
+        </nav>
+
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <nav class="nav-mobile">
+        <ul>
+          <li><a class="nav-link" href="../projects">WORKS</a></li>
+          <li><a class="nav-link2" href="../contact">CONTACT ME</a></li>
+          <li><a class="nav-link3" href="">RESUME</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="blog-hero hotel">
+      <h1>Hotel's Revenue Data Analytics</h1>
+      <div class="lang lang2">
+        <!-- <small>
+                Python
+            </small> -->
+        <!-- <small>
+                R
+            </small> -->
+        <small> Power BI </small>
+        <!-- <small>
+                Excel
+            </small> -->
+        <small>
+                SQL
+            </small>
+      </div>
+    </section>
+
+    <section class="article">
+      <article>
+        <h2 class="title">SQL PROJECT (Hotel Revenue Data Analysis)</h2>
+
+        <h3>
+          Goals:
+        </h3>
+        <ul class="blog">
+          <li>
+            To develop a SQL database,
+          </li>
+          <li>
+            To import tables into SQL database,
+          </li>
+          <li>
+            To analyze and build a visual data story/dashboard using power BI to answer the following business questions and present it to the stakeholders;
+          </li>
+        </ul>
+        <br />
+
+        <ol class="blog">
+          <li>
+            Is the hotel revenue growing by year?
+          </li>
+          <li>
+            Should the holtels increase their parking lot size? They want to understand if there is a trend with guest with personal cars.
+          </li>
+          <li>
+            what trends can we see in the data? focus on average daily rate and guests to explore seasonality
+          </li>
+        </ol>
+        <br />
+
+        <p>
+          <strong>Data source:</strong> <a class="b-link" href="https://absentdata.com/wp-content/uploads/2021/05/hotel_revenue_historical_full-2.xlsx">https://absentdata.com/wp-content/uploads/2021/05/hotel_revenue_historical_full-2.xlsx</a>
+        </p>
+
+        <p>
+          <strong>Tools Used: </strong>SQL (Microsoft SQL Server Management Studio with Azure Data Studio), and Power BI (DAX, Power Query, and Power BI Service)
+        </p><br>
+
+        <h3>
+          DATA ANALYSIS PROJECT PIPELINE
+        </h3>
+
+        <ol class="blog">
+          <li>
+            <strong>Build a Database</strong><br>
+            SQL Server was established using Microsoft SQL server 16, The project database was created under the localhost SQL server. Importation of the dataset into the database; the excel file was imported into the database. the file consists of five excel sheets, namely; 2018, 2019, 2020, market segment, and meal cost.
+          </li><br>
+          <li>
+            <strong>Develop SQL Query</strong><br>
+            Used Union SQL query to develop the data 2018, 2019, and 2020 into a unified single table. After the data merging, got a total of 100,756 rows with 32 columns. Used SQL Queries to answer this question; Is the hotel revenue growing? To answer the bsuiness question using SQL query, needed to create a revenue column. Created a new column for revenue; with the formular; (stays_in_weekend_nights+stays_in_week_nights)*adr (daily rate) <br>
+            <br> Selected revenue with hotels and grouped by the years. <br>
+            <br>From the result, There is a increase in revenue for each hotel by years. <br>
+            <br>Merged market segment table and meal cost table to the unified table. Left joined meal cost table and market segment to the unified table. <br>
+
+
+            <div class="blog-img">
+              <img src="/projects/assets/consolidated table.jpg" alt="consolidated table" />
+              <figcaption>
+                consolidated table
+              </figcaption>
+            </div>
+            <br />
+
+          </li><br>
+          <li>
+            <strong>Extract data from SQL server into power BI</strong><br>
+            Added data via SQL server, copied the SQL queries used to join the sheets, and merged the tables.
+          </li><br>
+          <li>
+            <strong>Data transformation and manipulation.</strong><br>
+            Did data cleaning and transformation in Power Query. By changing datatypes where necessary, and dropping of dulplicated columns. Also, added a custom column for the hotels revenue. Craeted measures for total nights, discount percentage. <br>
+
+            <div class="blog-img">
+              <img src="/projects/assets/Hotel_Revenue_Dashboard.jpg" alt="hotel revenue dashboard" />
+              <figcaption>
+                Click to
+                <a
+                  target="_blank"
+                  href="https://app.powerbi.com/view?r=eyJrIjoiMmY3ODIzYWQtOGY4Ni00NGJhLWEyNzEtMjEwZDZlZjAxOGFlIiwidCI6IjM3NzY1MTAyLWQwZjgtNDJmYi05NTQ3LTY1ZTAwMTllZDk1ZiJ9"
+                  >view the interactive dashboard</a
+                >
+              </figcaption>
+            </div>
+            <br />
+          </li>
+        </ol>
+        <br />
+
+        <h3>
+          ANSWERS TO THE BUSINESS QUESTIONS;
+        </h3>
+
+        <ol class="blog">
+          <li>
+            <strong>Is the hotel revenue growing by year?</strong><br>
+            The hotel's revenues are increasing by year, and this is true for both City Hotel and Resort Hotel. From 2018to 2019, there was a significant increase in revenue for both hotels, with a slight decrease in 2020, most likely due to the pandemic. The line chart shows a steady increase in revenue for both hotels over the years.
+          </li><br>
+
+          <li>
+            <strong>Should the stakeholders increase the parking lot size?</strong><br>
+            The data shows a slight increase in the required car parking space over the years, indicating that guests with personal cars are increasing. However, it is important to note that there is no correlation between parking space and revenue. Therefore, increasing the parking lot size might not necessarily lead to an increase in revenue. It would be wise to conduct further analysis to determine the impact of increasing parking space on revenue.
+          </li><br>
+
+          <li>
+            <strong>What trends can we see in the data?</strong><br>
+            The average daily rate (ADR) seems to fluctuate throughout the years, with the highest ADR recorded in 2020. However, this might be due to the pandemic, which might have led to fewer guests and an increase in the ADR. There is also a noticeable seasonality trend in the data, with a higher ADR during the summer months and a lower ADR during the winter months. Total nights booked also follow a similar trend, with more bookings during the summer months.
+          </li>
+        </ol>
+
+        <h3>
+          Based on the above analysis, it is recommended that the hotel management team take the following steps:
+        </h3>
+
+        <ul class="blog">
+          <li>
+            Continue to focus on increasing revenue for both hotels by implementing targeted marketing campaigns and offering discounts during low season months.
+          </li>
+          <li>
+            Conduct further analysis to determine the impact of increasing parking space on revenue.
+          </li>
+          <li>
+            Consider adjusting pricing strategies during peak and off-peak seasons to optimize revenue and occupancy.
+          </li>
+          <li>
+            Overall, with the growing trend in hotel revenue and the potential for increased revenue through targeted marketing campaigns and adjusting pricing strategies, the hotel management team should focus on these areas to drive future growth.
+          </li>
+        </ul>
+        <br />
+      </article>
+
+      <div class="btn">
+        <a
+          type="button"
+          target="_blank"
+          href="https://github.com/rajikudusadewale/Hotel-s-Revenue-Data-Analytics"
+          class="sec-btn"
+          >Continue reading</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <small> © Raji Kudus Adewale 2023 </small>
+    </footer>
+  </body>
+  <script src="../script.js"></script>
+</html>
