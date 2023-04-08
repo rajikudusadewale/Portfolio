@@ -5,7 +5,7 @@
 
     <meta
       name="title"
-      content="Titanic EDA by Raji
+      content="TikTok Reviews Sentiment Analysis by Raji
     Kudus Adewale"
     />
     <meta
@@ -21,7 +21,7 @@
     />
     <meta
       property="og:title"
-      content="Titanic EDA by Raji
+      content="TikTok Reviews Sentiment Analysis by Raji
     Kudus Adewale"
     />
     <meta
@@ -41,7 +41,7 @@
     />
     <meta
       property="twitter:title"
-      content="Titanic EDA by Raji
+      content="TikTok Reviews Sentiment Analysis by Raji
     Kudus Adewale"
     />
     <meta
@@ -57,7 +57,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Titanic EDA | Raji Kudus Adewale</title>
+    <title>TikTok Reviews Sentiment Analysis | Raji Kudus Adewale</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="projects.css" />
     <link
@@ -100,13 +100,13 @@
       </nav>
     </header>
 
-    <section class="blog-hero titanic">
-      <h1>Titanic EDA</h1>
+    <section class="blog-hero tiktok">
+      <h1>TikTok Reviews Sentiment Analysis</h1>
       <div class="lang lang2">
-        <!-- <small>
+        <small>
                 Python
-            </small> -->
-        <small> R </small>
+            </small>
+        <!-- <small> R </small> -->
         <!-- <small>
                 Power BI
             </small> -->
@@ -121,47 +121,70 @@
 
     <section class="article">
       <article>
-        <h2 class="title">Exploratory Data Analysis on Titanic Incident</h2>
 
-        <h3>Exploratory Data Analysis (EDA)</h3>
+        <h3>TikTok is a social media platform for creating, sharing, and discovering short-form videos. TikTok allows users to create short videos that can be up to 60 seconds and more, featuring music, sound effects, filters, and other creative tools.</h3><br>
+        
         <p>
-          This is an approach to analyzing and summarizing data that is used to understand its main features and patterns. EDA is typically used in the early stages of data analysis, to gain a deeper understanding of the data and to identify potential relationships or trends that can be explored in further detail.
+          Users can also interact with other users' videos by commenting, liking, and sharing them. Despite its entertaining content, this application is not liked by everyone. If you skim through its reviews, you’ll find a mixture of hate and support for TikTok all over the world. <br> <br> <strong>Sentiment analysis of reviews</strong> is a type of natural language processing (NLP) that involves analyzing the opinions, emotions, and attitudes expressed in a piece of text, typically a review or a feedback. <br><br>The <strong>goal of sentiment analysis</strong> is to identify and extract subjective information from the text, such as whether the text expresses a positive, negative, or neutral sentiment or opinion. Let's analyze TikTok Reviews to find out what people feel about the content of this app.
         </p>
         <br />
 
         <p>
-          The Titanic dataset contains information about passengers on the Titanic, including their demographics, cabin class, fare paid, and whether they survived the disaster.
+          This project will go through the task of TikTok reviews sentiment analysis. The dataset I am gonna use for sentiment analysis was downloaded from kaggle. It was scrapped from TikTok reviews on Google play store and it has been processed to a format that fit for sentiment analysis, though more data manipulations would be done.
         </p><br>
 
         <div class="blog-img">
-          <img src="/projects/assets/Report SS.jpg" alt="repot" />
+          <img src="/projects/assets/tiktok.png" alt="tiktok" />
           <figcaption>
-            Exploratory Data Analysis
+            Click to
+                <a
+                  target="_blank"
+                  href="hhttps://www.kaggle.com/datasets/shivkumarganesh/tiktok-google-play-store-review?resource=download"
+                  >access the Data Source</a
+                >
           </figcaption>
         </div><br>
 
-        <p>
-          Based on the exploratory data analysis (EDA) performed on the Titanic dataset, the following conclusions and insights can be drawn
-        </p>
-        <br />
+        <h3>
+          About Dataset
+        </h3>
+        <p>The content of the various columns is listed below. Please find the description for each column.</p>
 
-        <ol class="blog">
+        <ul class="blog">
           <li>
-            The majority of the passengers were in third class, with only a small percentage in first class.
+            <strong>Column Name:</strong> Column Description
           </li>
           <li>
-            The survival rate of passengers in first class was higher than those in second and third class.
+            <strong>userName:</strong> Name of a User
           </li>
           <li>
-            Female passengers had a much higher survival rate than male passengers.
+            <strong>userImage:</strong> Profile Image that a user has
           </li>
           <li>
-            Passengers with family members onboard had a higher survival rate than those who were traveling alone.
+            <strong>content:</strong> This represents the comments made by a user
           </li>
           <li>
-            The age distribution of passengers was skewed towards younger passengers, with a large number of passengers under the age of 30.
+            <strong>score:</strong> Scores/Rating between 1 to 5
           </li>
-        </ol>
+          <li>
+            <strong>thumbsUpCount:</strong> Number of Thumbs up received by a person
+          </li>
+          <li>
+            <strong>reviewCreatedVersion:</strong> Version no on which the review iscreated
+          </li>
+          <li>
+            <strong>at:</strong> Created At
+          </li>
+          <li>
+            <strong>replyContent:</strong> Reply to the comment by the Company
+          </li>
+          <li>
+            <strong>repliedAt:</strong> Date and time of the above reply
+          </li>
+          <li>
+            <strong>reviewId:</strong>  unique identifier​
+          </li>
+        </ul>
         <br />
 
         
@@ -171,7 +194,7 @@
         <a
           type="button"
           target="_blank"
-          href="https://github.com/rajikudusadewale/Titanic-EDA"
+          href="https://github.com/rajikudusadewale/TikTok-Reviews-Sentiment-Analysis-"
           class="sec-btn"
           >Continue reading</a
         >
