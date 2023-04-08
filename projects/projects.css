@@ -169,7 +169,7 @@
 }
 
 img {
-  width: 80%;
+  width: 90%;
   max-width: max-content;
 }
 
@@ -188,4 +188,17 @@ figcaption {
   font-size: 16px;
   line-height: 160.02%;
   color: var(--secondary);
+}
+
+
+
+@media screen and (max-width: 550px) {
+  img {
+    width: 100%;
+    max-width: max-content;
+  }
+
+  .blog-hero {
+    padding: 90px 7%;
+  }
 }

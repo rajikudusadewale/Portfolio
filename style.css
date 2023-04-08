@@ -20,7 +20,7 @@ html {
 }
 
 section {
-  padding: 60px 10%;
+  padding: 60px 7%;
 }
 
 .header,
@@ -599,6 +599,15 @@ input:last-child {
 }
 
 @media screen and (max-width: 550px) {
+
+  .hero {
+    padding: 80px 7%;
+  }
+
+  .hero .right img {
+    width: 90%;
+  }
+
   .card {
     width: 100%;
   }
