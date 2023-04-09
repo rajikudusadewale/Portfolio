@@ -155,15 +155,6 @@
         </ol>
         <br />
 
-        <div class="blog-img">
-          <img
-            src="/projects/assets/Student Performance Prediction.png"
-            alt="student-perfomance"
-          />
-          <figcaption>Proposed system architecture</figcaption>
-        </div>
-        <br />
-
         <h3>Aims and Objectives</h3>
 
         <p>
@@ -196,21 +187,6 @@
         </p>
         <br />
 
-        <deckgo-highlight-code language="r">
-          <code slot="code">
-            library('tidyverse') library('data.table') library('superml') std_df
-            <- read.table('student data.csv', header = TRUE, sep = ";")
-            View(std_df) head(std_df, n = 3) str(std_df) summary(std_df)
-            #renaming few variables: setnames(std_df, old = c("Pstatus", "Medu",
-            "Fedu", "G1", "G2", "G3"), new = c("parent_cohabitation_status",
-            "mother_edu", "father_edu", "first_period_grade",
-            "second_period_grade", "final_grade")) str(std_df) #checking for
-            missing values: sapply(std_df, function(x) sum(is.na(x), na.rm =
-            TRUE)/ length(x) * 100) library(Amelia) missmap(std_df, main =
-            "Missing Map")
-          </code> </deckgo-highlight-code
-        ><br />
-
         <h3>DESIGN CONSIDRATION</h3>
         <p>
           The following are included in the integrated frame work for evaluating
@@ -236,29 +212,32 @@
           </li>
         </ol>
         <br />
+        <h3>Summary and Conclusion</h3>
 
-        <deckgo-highlight-code language="python">
-          <code slot="code">
-            #creating our target variable std_df$Success_Status <- NA
-            std_df$Success_Status[std_df$final_grade >= 10] <- 1
-            std_df$Success_Status[std_df$final_grade < 10] <- 0 # Exploratory
-            data analysis #grade distribution ggplot(std_df, aes(x =
-            final_grade))+ theme_bw()+ geom_histogram(binwidth = 0.5)+ labs(y =
-            "Students count",x = 'Grades', title = "Student Grades
-            Distribution") #final grade and sex ggplot(std_df, aes(y =
-            final_grade, fill = sex))+ theme_bw()+ geom_boxplot()+ labs(y =
-            "Grades", x = 'Sex', title = "Grade Distribution")
-          </code> </deckgo-highlight-code
-        ><br />
+        <p>
+          <strong>Summary</strong> Data Mining detects the relevant patterns from databases/data warehouses using different programs and algorithms to look into current and historical data which can be analyzed to predict future trends. Statisticians have used different manual techniques for the benefit of the business, predicting trends and results based on data over the years. The business houses had developed huge databases or data warehouses to become “data tombs”. The data was never transformed into information. But with the help of data mining tools and algorithms now professionals from different areas may extract knowledge quickly and at ease. Performance of students in certain course, grade inflation, anticipated percentage of failing students, and assist in grading system. Up to our knowledge, there are no studies that use classification to predict a student final outcome based on his/her grades in a program study plan. Analyzing all the courses that are required in the study plan will identify the list of courses that have a huge impact on final results.
+        </p>
+        <br />
+        <p>
+          <strong>Conclusion</strong> In this work, integrated frame work for evaluating student performance is easily collected and managed with improved reliability, durability and efficiency. The most prominent feature of evaluating student performance can easily be analyse using R programing language which is mostly use by statisticians to get accurate results. Many previous works make use of a Weka and some other data mining techniques, where If we are not given those similar item set, then WEKA show an error pop-up message because WEKA does not support any undeclared numerical or string value and WEKA cannot generate individually any student’s performance, we can find only frequently possibility of overall students’ performance. From here, teachers can judge, from next time what type of students will be going to get good remarks in his absence.
+        </p>
+        <br />
+
+        <h3>Limitations</h3>
+
+        <p>
+          In R,quality of some packages is less than perfect. In R, no one to complain, if something doesn't work. R is a software Application that many people devote their own time to developing. R commands give little thought to memory management, and so R can consume all available memory.
+        </p>
+        <br />
       </article>
 
       <div class="btn">
         <a
           type="button"
           target="_blank"
-          href="https://github.com/rajikudusadewale/Student-Performance-Prediction-Using-R"
+          href="https://github.com/rajikudusadewale/Student-Performance-Prediction-Using-R/blob/main/student%20evaluation.R"
           class="sec-btn"
-          >Continue reading</a
+          >View script</a
         >
       </div>
     </section>
