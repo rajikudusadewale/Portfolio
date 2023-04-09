@@ -123,79 +123,82 @@
       <article>
         <h2 class="title">Spatial Data Analysis and Visualization in R</h2>
 
+        <h3>
+          Spatial Data Analysis and Visualization
+        </h3>
+
+        <p>
+          These are two important aspects of geospatial analysis. Spatial data analysis involves the use of statistical and analytical techniques to analyze spatial data, while spatial data visualization involves the use of graphical and cartographic techniques to display spatial data.
+        </p><br>
+        <p>
+          Some common techniques used in spatial data analysis include;
+        </p>
+
+        <ul class="blog">
+          <li>spatial clustering,</li>
+          <li>spatial regression, and</li>
+          <li>spatial interpolation.</li>
+        </ul>
+        <br />
+
+        <p>
+          <strong>Spatial clustering</strong> Involves identifying groups of data points that are close to each other in space.
+        </p>
+
+        <p>
+          <strong>Spatial regression</strong> involves analyzing the relationship between a dependent variable and one or more independent variables, taking into account spatial dependencies.
+        </p>
+
+        <p>
+          <strong>Spatial interpolation</strong> Involves estimating the values of a variable at unsampled locations based on the values of that variable at nearby sampled locations.
+        </p>
+
+        <p>
+          <strong>Spatial data visualization</strong> can be done in various ways, such as choropleth maps, dot density maps, and heatmaps.
+        </p>
+
+        <p>
+          Choropleth maps use different colors or shades to represent different values of a variable for different geographic regions.
+        </p>
+
+        <p>
+          Dot density maps represent data by placing dots within a given area, with the number or size of dots representing the intensity of the data.
+        </p>
+
+        <p>
+          Heatmaps use a color scale to represent the intensity of data in a given area, with warmer colors indicating higher values and cooler colors indicating lower values.
+        </p><br>
+
+        <p>
+          In order to perform spatial data analysis and visualization, a range of tools and software are available but we are employing <strong>R</strong> as a tool carry out <strong>spatial data analysis and visualization</strong>. This tool provide users with a range of functions and packages that enable them to manipulate and analyze spatial data, as well as create various types of visualizations.
+        </p><br>
+
+        <p>
+          Data files used for the project were uploaded in the repository.
+        </p>
+
+        <p>
+          This work is partitioned into 9 segments;
+        </p><br>
+
         <ol class="blog">
-          <li>Intro-</li>
-          <li>Finding relationships of spatial data</li>
-          <li>Maps making using tmap library</li>
-          <li>Using R as a GIS tool.</li>
-          <li>Density Analysis.</li>
-          <li>Spatial autocorrelation.</li>
-          <li>Geographically weighted regressions.</li>
+          <li>Intoduction to spatial data analysis and visualization in R. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project.R">Check the script here</a></li>
+          <li>Finding relationship in R. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_II_FINDING%20RELATIONSHIPS%20IN%20R.R">Check the script here</a></li>
+          <li>Making Maps in R. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_III_MAKING%20MAPS%20IN%20R.R">Check the script here</a></li>
+          <li>Mapping Point Data. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_IV_MAPPING%20POINT%20DATA.R">Check the script here</a></li>
+          <li>Using R as a GIS. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_V_USING%20R%20AS%20A%20GIS.R">Check the script here</a></li>
+          <li>Running Density Analysis. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_VI_RUNNING%20DENSITY.R">Check the script here</a></li>
+          <li>Spatial Autocorrelation. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_VII_%20SPATIAL%20AUTOCORRELATION.R">Check the script here</a></li>
+          <li>Geographically Weighted regression. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_VIII_GEOGRAPHICALLY%20WEIGHTED%20REGRESSION.R">Check the script here</a></li>
+          <li>Loops and functions. <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Camden_Project_LOOPS_FUNC.R">Check the script here</a></li>
         </ol>
         <br />
 
-        <deckgo-highlight-code language="r">
-          <code slot="code">
-# load the csv files needed
-Ethnicity <- read.csv('tables/KS201EW_oa11.csv')
-Rooms <- read.csv("tables/KS403EW_oa11.csv")
-Qualifications <-read.csv("tables/KS501EW_oa11.csv")
-Employment <-read.csv("tables/KS601EW_oa11.csv")
-
-### Observing column names ######
-
-colnames(Ethnicity)
-Ethnicity <- Ethnicity[, c(1,21)]
-Rooms <- Rooms[, c(1,13)]
-Qualifications <- Qualifications[, c(1,20)]
-Employment <- Employment[, c(1,20)]
-          </code> </deckgo-highlight-code
-        ><br />
-
-        <deckgo-highlight-code language="python">
-          <code slot="code">
-### Exploring the data
-print(Census.Data)
-print(Census.Data[1:20,1:5])
-# to get no of cols: ncol(), to get no of row: nrow()
-
-#Desprictive Statistics: 
-mean(Census.Data$Unemployed) #median(), range(), summary()
-
-## Univariate Plots : mainly for continous variables
-# histogram
-hist(Census.Data$Unemployed, breaks = 20, col = 'blue', main = '% in full-time
-     employment', xlab='Percentage' )
-
-#Boxplots # ploting for multi-variables
-boxplot(Census.Data[,2:5])
-          </code> </deckgo-highlight-code
-        ><br />
-
-        <deckgo-highlight-code language="python">
-          <code slot="code">
-#Symbols plot
-# Create a proportional symbols plot
-symbols(Census.Data$Unemployed,Census.Data$Qualification,  circles = Census.Data$White_British, 
-        fg="white", bg ="purple", inches = 0.2) 
-##########ADDING A REGRESSION LINE #################
-# using lm() func to plot  a linear model. abline() func rep the outputted reg line
-# bubble plot
-symbols(Census.Data$Unemployed, Census.Data$Qualification,  circles = Census.Data$White_British, fg="white", bg ="purple", inches = 0.2,  xlab="% in full time employment", ylab="% With a Qualification") +
-  # adds a regression line, sets the colour to red
-  abline(lm(Census.Data$Qualification~ Census.Data$Unemployed), col="black", lty = 2, lwd = 2)
-
-# we can edit the line using the line type (lty) and line width (lwd) commands from abline
-
-####  USING GGPLOT 2 ######################
-ggplot(Census.Data, aes(x = Unemployed, y = Qualification))+
-  geom_point()
-
-##### PLOT 4 DIFF VARIABLES IN 1 2 DIMENSIONAL CHART
-ggplot(Census.Data, aes(x = Unemployed, y = Qualification))+
-  geom_point(aes(color = White_British, size = Low_Occupancy))
-          </code> </deckgo-highlight-code
-        ><br />
+        <p>
+          You can view one of the interactive map created using #leaflet tool here <a target="_blank" class="b-link" href="https://github.com/rajikudusadewale/Spatial-Data-Analysis/blob/main/Interactive%20maps.rar">HERE</a>
+        </p>
+        
+        <br />
       </article>
 
       <div class="btn">
