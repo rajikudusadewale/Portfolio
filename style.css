@@ -222,8 +222,8 @@ nav ul li:nth-child(3) a,
 }
 
 .hero .right img {
-  width: 100%;
-  max-width: max-content;
+  width: 80%;
+  /* max-width: max-content; */
 }
 
 /* ABOUT SECTION */
