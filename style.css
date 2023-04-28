@@ -640,3 +640,31 @@ input:last-child {
     width: 100%;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  section,
+  .header,
+  footer, .hero {
+    width: 100%;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  section {
+    padding: 3% 3%;
+  }
+
+  .hero {
+    padding: 80px 3%
+  }
+
+  .header,
+  footer {
+    padding: 10px 3%;
+  }
+
+  .card {
+    width: 29%;
+  }
+}

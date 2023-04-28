@@ -210,3 +210,12 @@ figcaption {
     padding: 90px 7%;
   }
 }
+
+
+
+
+@media screen and (min-width: 1440px) {
+  .blog-hero {
+    padding: 90px 3%;
+  }
+}
