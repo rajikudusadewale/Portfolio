@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Primary Meta Tags -->
+
+    <meta
+      name="title"
+      content="Collection Performance Analysis by Raji
+    Kudus Adewale"
+    />
+    <meta
+      name="description"
+      content="The bike company want to know what influenced Individual customers that got a bike, what's attributes customers that got bikes and the ones that didnt possess."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.akraji.com/projects/bike-sales-performance.html"
+    />
+    <meta
+      property="og:title"
+      content="Collection Performance Analysis by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="og:description"
+      content="The bike company want to know what influenced Individual customers that got a bike, what's attributes customers that got bikes and the ones that didnt possess."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.akraji.com/projects/bike-sales-performance.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Collection Performance Analysis by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="twitter:description"
+      content="The bike company want to know what influenced Individual customers that got a bike, what's attributes customers that got bikes and the ones that didnt possess."
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <meta name="theme-color" content="#3D3B67" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection Performance Analysis | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a class="logo" href="https://www.akraji.com/">
+          <h2>Raji.</h2>
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="../projects">WORKS</a></li>
+            <li><a href="../contact">CONTACT ME</a></li>
+            <li><a href="">RESUME</a></li>
+          </ul>
+        </nav>
+
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <nav class="nav-mobile">
+        <ul>
+          <li><a class="nav-link" href="../projects">WORKS</a></li>
+          <li><a class="nav-link2" href="../contact">CONTACT ME</a></li>
+          <li><a class="nav-link3" href="">RESUME</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="blog-hero bike">
+      <h1>Collection Performance Analysis</h1>
+      <div class="lang lang2">
+        <!-- <small>
+                Python
+            </small> -->
+        <small>
+                R
+            </small>
+        <small> Power BI </small>
+        <small>
+                Excel
+            </small>
+        <!-- <small>
+                SQL
+            </small> -->
+      </div>
+    </section>
+
+    <section class="article">
+      <article>
+        <h2 class="title">A collection performance analysis aims to assess the effectiveness of the company's collection strategies and processes.</h2>
+
+        <p>
+          Specifically, the analysis aims to identify areas where the company can improve its collections processes, reduce its default rates, and increase its recovery of outstanding debts. By analyzing key metrics such as the total number of customers, total transactions, total balance, and total amount.
+        </p>
+        <br />
+
+        <h3>
+          Analysis Pipeline
+        </h3>
+
+        <ul class="blog">
+          <li><strong>Data Cleaning:</strong><br> Used Excel and R for data cleaning. In the transaction Table, all Transaction dates for interest payments were recorded as text/characters. Importing such data to Power BI would show an error. Decided to use R with the use of the Lubridate library to convert the column to a datatype that will allow any date functions to be carried out.</li>
+
+          <li><strong>Data Joining:</strong><br> Then joined the transaction table in Excel,</li>
+
+          <li><strong>Data Presentation:</strong><br> Changed columns to appropriate data types that fit the aim of the analysis and performed neccessary manipulation.Carried out data visualization using Power BI to create a Collection Performance Dashboard.</li>
+        </ul>
+        <br />
+
+        <div class="blog-img">
+          <img src="/projects/assets/cpa Dashboard.jpg" alt="cpa dashboard" />
+          <figcaption>
+            You can interact with the dashboard <a class="b-link" target="_blank"  href="https://app.powerbi.com/view?r=eyJrIjoiYjdmNjY5M2EtMzA5MS00ZjdkLTkwYmEtNmViOTMzZjkzZWFlIiwidCI6IjM3NzY1MTAyLWQwZjgtNDJmYi05NTQ3LTY1ZTAwMTllZDk1ZiJ9">here</a>
+          </figcaption>
+        </div>
+
+        <h3>Trends and Insights</h3>
+
+        <br />
+        <ul class="blog">
+          <li>The line chart showing the balance over time indicates that there is an up-and-down trend in the balance for the top 5 product types. The fluctuating trend in the balance for the top 5 product types indicates that the collection strategy is average.</li>
+
+          <li>The line chart showing the balance over time indicates that there is an up-and-down trend in the balance for the top 5 product types. The fluctuating trend in the balance for the top 5 product types indicates that the collection strategy is average.</li>
+
+          <li>The Bar chart shows that the most used product is the Master card with 20% of overall customers, and it has transacted the most.</li>
+
+          <li>The doughnut chart shows the total number of Repayment and Interest transactions done, which are 37752 and 37870, respectively.</li>
+
+          <li>The product type with the highest number of defaults also has the highest number of customers.</li>
+
+          <li>But the right chart shows that the product type with the highest number of defaults and customers differs from the product with the highest default rate.</li>
+
+          <li>Visa product has the highest default rate percentage compared to the master card with a higher number of customers and default count</li>
+
+          <li>
+            Most customers enter arrears after missing a repayment on their debt within the years. There has been an increase in the trend of debt counts over the years.
+          </li>
+
+          <li>
+            The left chart shows the top 5 customer IDs with the highest outstanding debts in 2021.
+          </li>
+
+          <li>
+            While the right chart shows the customer IDs with the lowest outstanding debts
+          </li>
+        </ul>
+      </article>
+
+      <div class="btn">
+        <a
+          type="button"
+          target="_blank"
+          href="https://github.com/rajikudusadewale/Collection-Performance-Analysis"
+          class="sec-btn"
+          >Continue reading</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <small> © Raji Kudus Adewale 2023 </small>
+    </footer>
+  </body>
+  <script src="../script.js"></script>
+</html>
