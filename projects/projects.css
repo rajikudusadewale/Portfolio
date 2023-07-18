@@ -165,6 +165,14 @@
     url(/assets/featuredIMG/uk\ accidents.webp);
 }
 
+.web-scrapping {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/web\ scraping.webp);
+}
+
 .lang2 {
   justify-content: flex-start;
 }
