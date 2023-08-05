@@ -173,6 +173,14 @@
     url(/assets/featuredIMG/web\ scraping.webp);
 }
 
+.fin-board {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/Financial\ Dashboard.jpg);
+}
+
 .lang2 {
   justify-content: flex-start;
 }
