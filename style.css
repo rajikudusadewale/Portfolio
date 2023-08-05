@@ -338,7 +338,7 @@ nav ul li:nth-child(3) a,
   padding: 40px 0;
 }
 .slide-content {
-  margin: 0 40px;
+  margin: 0 30px;
   overflow: hidden;
 }
 
@@ -367,8 +367,8 @@ nav ul li:nth-child(3) a,
 
 .card-img {
   width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  aspect-ratio: 2/1;
+  object-fit: contain;
 }
 
 .name {
