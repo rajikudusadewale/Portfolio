@@ -101,6 +101,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.103);
 }
 
 .header a h2 {
@@ -326,6 +327,7 @@ nav ul li:nth-child(3) a,
 
 .slider-cont {
   padding: 50px 3%;
+  background: white;
 }
 
 .slider {
@@ -412,6 +414,7 @@ nav ul li:nth-child(3) a,
 
 .contact {
   text-align: center;
+  background: var(--white);
 }
 
 .contact h3 {
@@ -423,6 +426,8 @@ footer {
   background-color: var(--primary);
   color: var(--secondary);
   font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 /* PROJECT PAGE */
@@ -641,14 +646,23 @@ input:last-child {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1600px) {
   section,
   .header,
-  footer, .hero {
+  /* footer,  */
+  .hero {
     width: 100%;
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.103);
+  }
+
+  .header {
+    /* padding: 10px 50px; */
   }
 
   section {
@@ -659,12 +673,11 @@ input:last-child {
     padding: 80px 3%
   }
 
-  .header,
-  footer {
-    padding: 10px 3%;
-  }
-
   .card {
     width: 29%;
+  }
+
+  body {
+    background: var(--secondary);
   }
 }
