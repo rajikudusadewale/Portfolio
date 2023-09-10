@@ -459,6 +459,7 @@ footer {
 .form {
   display: flex;
   justify-content: space-between;
+  background: var(--white);
 }
 
 .form .left,
@@ -679,5 +680,10 @@ input:last-child {
 
   body {
     background: var(--secondary);
+    overflow-x: hidden;
+  }
+
+  .c-hero {
+    background: #fff;
   }
 }
