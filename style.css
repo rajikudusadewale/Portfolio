@@ -662,9 +662,6 @@ input:last-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.103);
   }
 
-  .header {
-    /* padding: 10px 50px; */
-  }
 
   section {
     padding: 3% 3%;
