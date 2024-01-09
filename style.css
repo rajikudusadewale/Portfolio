@@ -428,6 +428,20 @@ footer {
   font-weight: 700;
   display: flex;
   justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--secondary);
+  font-size: 18px;
 }
 
 /* PROJECT PAGE */
@@ -644,6 +658,10 @@ input:last-child {
 
   .carousel img {
     width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
   }
 }
 
