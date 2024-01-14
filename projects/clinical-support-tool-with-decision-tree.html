@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Primary Meta Tags -->
+
+    <meta
+      name="title"
+      content="Clinical Support Tool with Decision Tree by Raji
+    Kudus Adewale"
+    />
+    <meta
+      name="description"
+      content="Objective: To construct a model from historical patient data to predict the most appropriate medication for a new patient with the same illness."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.akraji.com/projects/clinical-support-tool-with-decision-tree.html"
+    />
+    <meta
+      property="og:title"
+      content="Clinical Support Tool with Decision Tree by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="og:description"
+      content="Objective: To construct a model from historical patient data to predict the most appropriate medication for a new patient with the same illness."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.akraji.com/projects/clinical-support-tool-with-decision-tree.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Clinical Support Tool with Decision Tree by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="twitter:description"
+      content="Objective: To construct a model from historical patient data to predict the most appropriate medication for a new patient with the same illness."
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <meta name="theme-color" content="#3D3B67" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Support Tool with Decision Tree | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"> -->
+    <script
+      type="module"
+      src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a class="logo" href="https://www.akraji.com/">
+          <h2>Raji.</h2>
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="../projects">WORKS</a></li>
+            <li><a href="../contact">CONTACT ME</a></li>
+            <li><a href="">RESUME</a></li>
+          </ul>
+        </nav>
+
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <nav class="nav-mobile">
+        <ul>
+          <li><a class="nav-link" href="../projects">WORKS</a></li>
+          <li><a class="nav-link2" href="../contact">CONTACT ME</a></li>
+          <li><a class="nav-link3" href="">RESUME</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="blog-hero cds">
+      <h1>Clinical Support Tool with Decision Tree</h1>
+      <div class="lang lang2">
+        <small>Python</small>
+        <small>Machine Learning</small>
+        <!-- <small> R </small> -->
+        <!-- <small>
+                Power BI
+            </small> -->
+        <!-- <small>
+                Excel
+            </small> -->
+        <!-- <small>
+                SQL
+            </small> -->
+      </div>
+    </section>
+
+    <section class="article">
+      <article>
+        <h2 class="title">
+          Building a Clinical Decision Support Tool with Decision Trees
+        </h2>
+
+        <h3>Objective: To construct a model from historical patient data to predict the most appropriate medication for a new patient with the same illness.</h3>
+        <br />
+
+
+        <h3>Data Description</h3>
+        <ul class="blog">
+          <li>
+            <strong>Context:</strong> The data is compiled for a study on patients who have all suffered from the same illness.
+          </li>
+
+          <li>
+            <strong>Features:</strong> Age, Sex, Blood Pressure, and Cholesterol levels of the patients.
+          </li>
+
+          <li>
+            <strong>Target Variable:</strong> The medication to which each patient responded (Drug A, B, C, X, or Y).
+          </li>
+        </ul><br />
+
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+import numpy as np 
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+          </code> </deckgo-highlight-code
+        ><br /><br />
+
+
+        <h3>Development Process</h3>
+        <ol class="blog">
+          <li>
+            <strong>Data Loading and Preparation:</strong><br />
+            <ul>
+              <li>
+                Libraries such as pandas and numpy for data manipulation and sklearn for the DecisionTreeClassifier are imported.
+              </li>
+              <li>
+                The patient data is loaded into a DataFrame for further processing.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Exploratory Data Analysis:</strong><br />
+            <ul>
+              <li>
+                An initial exploration of the data is likely performed to understand the distribution and characteristics of the features and response variable.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Model Development:</strong><br />
+            <ul>
+              <li>
+                A decision tree classifier is developed using the sklearn library.
+              </li>
+              <li>
+                The model is trained on the historical patient data to learn the patterns associated with the medication responses.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Model Evaluation:</strong><br />
+            <ul>
+              <li>
+                The accuracy of the model is measured using the <em>accuracy_score</em> function from sklearn's metrics module.
+              </li>
+              <li>
+                A confusion matrix is generated to evaluate the performance across different classes.
+              </li>
+            </ul>
+          </li>
+        </ol><br />
+        
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+# Converting Cat to num values
+
+from sklearn import preprocessing
+le_sex = preprocessing.LabelEncoder()
+le_sex.fit(['F','M'])
+X[:,1] = le_sex.transform(X[:,1])
+
+le_BP = preprocessing.LabelEncoder()
+le_BP.fit([ 'LOW', 'NORMAL', 'HIGH'])
+X[:,2] = le_BP.transform(X[:,2])
+
+
+le_Chol = preprocessing.LabelEncoder()
+le_Chol.fit([ 'NORMAL', 'HIGH'])
+X[:,3] = le_Chol.transform(X[:,3]) 
+
+X[0:5]
+          </code> </deckgo-highlight-code
+        ><br />
+
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+print('shape of X_trainset:', X_train.shape)
+print('shape of y_trainset:', y_train.shape)
+print('shape 0f x_testset', X_test.shape)
+print('shape of y_testset:', y_test.shape)
+          </code> </deckgo-highlight-code
+        ><br /><br />
+
+
+        <h3>Evaluation Results</h3>
+        <ul class="blog">
+          <li>
+            <strong>Accuracy:</strong> The model achieved an accuracy of 98.33%, indicating a high level of precision in predicting the correct medication.
+          </li>
+
+          <li>
+            <strong>Confusion Matrix:</strong> The matrix suggests that the classifier performed exceptionally well across all medication classes with the following correct predictions: <br />
+            <ul>
+              <li>Drug A: 7</li>
+              <li>Drug B: 5</li>
+              <li>Drug C: 5</li>
+              <li>Drug X: 20</li>
+              <li>Drug Y: 22 Only one instance of Drug X was misclassified, indicating a nearly perfect classification.</li>
+            </ul>
+          </li>
+        </ul><br /><br />
+
+
+        <h3>Conclusion</h3>
+
+        <p>The decision tree model demonstrates excellent performance in classifying the correct medication for patients based on their profiles. The high accuracy score and detailed confusion matrix indicate the model's potential as a robust clinical decision support tool.</p>
+        <br />
+      </article>
+
+      <div class="btn">
+        <a
+          type="button"
+          target="_blank"
+          href="https://github.com/rajikudusadewale/Clinical-Support-Tool-with-Decision-Tree"
+          class="sec-btn"
+          >View project</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <small> © Raji Kudus Adewale 2023 </small>
+      <div class="footer-links">
+        <a
+          href="https://www.youtube.com/@DeDataDude"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-youtube"></i>
+        </a>
+        <a
+          href="https://instagram.com/DEDATADUDE"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a
+          href="https://tiktok.com/@dedatadude"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kudus-adewale-raji-65a400134/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:dedatadude@akraji.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+  <script src="../script.js"></script>
+  <script src="https://kit.fontawesome.com/456f9bbaa5.js" crossorigin="anonymous"></script>
+</html>

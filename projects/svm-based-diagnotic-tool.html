@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Primary Meta Tags -->
+
+    <meta
+      name="title"
+      content="SVM Based Diagnotic Tool by Raji
+    Kudus Adewale"
+    />
+    <meta
+      name="description"
+      content="Developing an SVM-based Diagnotic Tool for Identifying Benign and Malignant Cells"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.akraji.com/projects/svm-based-diagnotic-tool.html"
+    />
+    <meta
+      property="og:title"
+      content="SVM Based Diagnotic Tool by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="og:description"
+      content="Developing an SVM-based Diagnotic Tool for Identifying Benign and Malignant Cells"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.akraji.com/projects/customer-dismissal-log-regression.html"
+    />
+    <meta
+      property="twitter:title"
+      content="SVM Based Diagnotic Tool by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="twitter:description"
+      content="Developing an SVM-based Diagnotic Tool for Identifying Benign and Malignant Cells"
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <meta name="theme-color" content="#3D3B67" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVM Based Diagnotic Tool | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"> -->
+    <script
+      type="module"
+      src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a class="logo" href="https://www.akraji.com/">
+          <h2>Raji.</h2>
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="../projects">WORKS</a></li>
+            <li><a href="../contact">CONTACT ME</a></li>
+            <li><a href="">RESUME</a></li>
+          </ul>
+        </nav>
+
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <nav class="nav-mobile">
+        <ul>
+          <li><a class="nav-link" href="../projects">WORKS</a></li>
+          <li><a class="nav-link2" href="../contact">CONTACT ME</a></li>
+          <li><a class="nav-link3" href="">RESUME</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="blog-hero svm-tool">
+      <h1>SVM Based Diagnotic Tool</h1>
+      <div class="lang lang2">
+        <small>Python</small>
+        <small>Machine Learning</small>
+      </div>
+    </section>
+
+    <section class="article">
+      <article>
+        <h2 class="title">
+          Developing an SVM-based Diagnotic Tool for Identifying Benign and Malignant Cells
+        </h2>
+
+        <h3>About Data</h3>
+        <p>The example is based on a dataset that is publicly available from the UCI Machine Learning Repository (<a href="http://mlearn.ics.uci.edu/MLRepository.html" target="_blank" class="b-link">Asuncion and Newman, 2007</a>).</p><br />
+
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td>Clump thickness</td>
+          </tr>
+          <tr>
+            <td>Clump</td>
+            <td>Clump thickness</td>
+          </tr>
+          <tr>
+            <td>UnifSize</td>
+            <td>Uniformity of cell size</td>
+          </tr>
+          <tr>
+            <td>UnifShape</td>
+            <td>CUniformity of cell shape</td>
+          </tr>
+          <tr>
+            <td>MargAdh</td>
+            <td>Marginal adhesion</td>
+          </tr>
+          <tr>
+            <td>SingEpiSize</td>
+            <td>Single epithelial cell size</td>
+          </tr>
+          <tr>
+            <td>BareNuc</td>
+            <td>Bare nuclei</td>
+          </tr>
+          <tr>
+            <td>BlandChrom</td>
+            <td>Bland chromatin</td>
+          </tr>
+          <tr>
+            <td>NormNucl</td>
+            <td>Normal nucleoli</td>
+          </tr>
+          <tr>
+            <td>Mit</td>
+            <td>Mitoses</td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td>Benign or malignant</td>
+          </tr>
+        </table><br />
+        <p>
+          Aimed at developing a Support Vector Machine (SVM)-based diagnostic tool for classifying cells as benign or malignant.
+        </p>
+        <br />
+
+        <h3>Introduction</h3>
+        <p>
+          The notebook begins with an overview of its objective, which is to develop an SVM-based tool for identifying benign and malignant cells using a dataset from the UCI Machine Learning Repository.
+        </p><br />
+
+        <h3>Data Description</h3>
+        <p>
+          The data features are described, including cell characteristics like Clump Thickness, Uniformity of Cell Size, and others. The target variable is the <em>Class</em> field indicating benign (2) or malignant (4) diagnoses.
+        </p><br />
+
+        <h3>Development Process</h3>
+        <ol class="blog">
+
+          <li>
+            <strong>Data Loading and Preprocessing:</strong><br />
+            <ul>
+              <li>
+                Libraries such as pandas, numpy, and sklearn are imported.
+              </li>
+              <li>
+                The dataset is loaded into a DataFrame, and initial exploration is performed.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Data Exploration and Visualization:</strong><br />
+            <ul>
+              <li>
+                This section includes visualizations and statistical analysis to understand the data better.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Model Development:</strong><br />
+            <ul>
+              <li>
+                The SVM model is created using sklearn's SVM module.
+              </li>
+              <li>
+                Features are selected, and the model is trained on the dataset.
+              </li>
+              <li>
+                Code cells are dedicated to setting up the SVM, adjusting parameters, and fitting the model to the data.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Model Evaluation:</strong><br />
+            <p>
+              The SVM-based diagnostic tool's performance was rigorously evaluated, and the results are encapsulated in a confusion matrix and a classification report:
+            </p><br />
+            <ul>
+              <li>
+                <strong>Confusion Matrix:</strong><br />
+                <ul>
+                  <li>
+                    True Positive (Benign): 85
+                  </li>
+                  <li>
+                    False Positive (Benign misclassified as Malignant): 5
+                  </li>
+                  <li>
+                    True Negative (Malignant): 47
+                  </li>
+                  <li>
+                    False Negative (Malignant misclassified as Benign): 0 This indicates that the model is particularly good at identifying malignant samples, with no instances of false negatives.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>Classification Report:</strong><br />
+                <ul>
+                  <li><strong>Class 2 (Benign):</strong>
+                    <ul>
+                      <li>
+                        Precision: 1.00 (no benign cases were misclassified as malignant)
+                      </li>
+                      <li>
+                        Recall: 0.94 (94% of the benign cases were correctly identified)
+                      </li>
+                      <li>
+                        TF1-Score: 0.97 (a measure of the test's accuracy)
+                      </li>
+                      <li>
+                        Support: 90 (number of actual occurrences of the class in the dataset)
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><strong>Class 4 (Malignant):</strong>
+                    <ul>
+                      <li>
+                        Precision: 0.90 (90% of the identified malignant cases were correct)
+                      </li>
+                      <li>
+                        Recall: 1.00 (every malignant case was identified correctly)
+                      </li>
+                      <li>
+                        F1-Score: 0.95
+                      </li>
+                      <li>
+                        Support: 47
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol><br />
+
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+import pandas as pd
+import pylab as pl
+import numpy as np
+import scipy.optimize as opt
+from sklearn import preprocessing
+# from sklearn.cross_validation import train_test_split
+%matplotlib inline 
+import matplotlib.pyplot as plt 
+          </code> </deckgo-highlight-code
+        ><br /><br />
+        
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+# Train_Test Split
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=4)
+print ('Train set:', X_train.shape,  y_train.shape)
+print ('Test set:', X_test.shape,  y_test.shape)
+          </code> </deckgo-highlight-code
+        ><br /><br />
+
+      </article>
+
+      <div class="btn">
+        <a
+          type="button"
+          target="_blank"
+          href="https://github.com/rajikudusadewale/SVM-Based-Diagnotic-Tool"
+          class="sec-btn"
+          >View project</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <small> © Raji Kudus Adewale 2023 </small>
+      <div class="footer-links">
+        <a
+          href="https://www.youtube.com/@DeDataDude"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-youtube"></i>
+        </a>
+        <a
+          href="https://instagram.com/DEDATADUDE"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a
+          href="https://tiktok.com/@dedatadude"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kudus-adewale-raji-65a400134/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:dedatadude@akraji.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+  <script src="../script.js"></script>
+  <script src="https://kit.fontawesome.com/456f9bbaa5.js" crossorigin="anonymous"></script>
+</html>

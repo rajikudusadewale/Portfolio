@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Primary Meta Tags -->
+
+    <meta
+      name="title"
+      content="Customer Dismissal Log Regression by Raji
+    Kudus Adewale"
+    />
+    <meta
+      name="description"
+      content="Purpose: To predict when customers of a telecommunications company will leave for a competitor, enabling the company to take action to retain customers."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.akraji.com/projects/customer-dismissal-log-regression.html"
+    />
+    <meta
+      property="og:title"
+      content="Customer Dismissal Log Regression by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="og:description"
+      content="Purpose: To predict when customers of a telecommunications company will leave for a competitor, enabling the company to take action to retain customers."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.akraji.com/projects/customer-dismissal-log-regression.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Customer Dismissal Log Regression by Raji
+    Kudus Adewale"
+    />
+    <meta
+      property="twitter:description"
+      content="Purpose: To predict when customers of a telecommunications company will leave for a competitor, enabling the company to take action to retain customers."
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajikudusadewale/Portfolio/main/assets/og%20image.png"
+    />
+
+    <meta name="theme-color" content="#3D3B67" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Dismissal Log Regression | Raji Kudus Adewale</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"> -->
+    <script
+      type="module"
+      src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a class="logo" href="https://www.akraji.com/">
+          <h2>Raji.</h2>
+        </a>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="../projects">WORKS</a></li>
+            <li><a href="../contact">CONTACT ME</a></li>
+            <li><a href="">RESUME</a></li>
+          </ul>
+        </nav>
+
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <nav class="nav-mobile">
+        <ul>
+          <li><a class="nav-link" href="../projects">WORKS</a></li>
+          <li><a class="nav-link2" href="../contact">CONTACT ME</a></li>
+          <li><a class="nav-link3" href="">RESUME</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="blog-hero log-reg">
+      <h1>Customer Dismissal Log Regression</h1>
+      <div class="lang lang2">
+        <small>Python</small>
+        <small>Machine Learning</small>
+      </div>
+    </section>
+
+    <section class="article">
+      <article>
+        <h2 class="title">
+          Customer Churn with Logistic Regression
+        </h2>
+
+        <h3>Purpose: To predict when customers of a telecommunications company will leave for a competitor, enabling the company to take action to retain customers.</h3>
+        <br />
+
+
+        <h3>Data Description</h3>
+        <ul class="blog">
+          <li>
+            <strong>Data Source:</strong> The dataset is hypothetical and is used to predict which customers will stay with the company.
+          </li>
+
+          <li>
+            <strong>Contents:</strong><br />
+            <ul>
+              <li>
+                Churn: Indicates customers who left within the last month.
+              </li>
+              <li>
+                Services: Lists services each customer has signed up for, such as phone, internet, online security, and streaming services.
+              </li>
+              <li>
+                Customer Account Information: Includes tenure, contract type, payment method, billing status, and charges.
+              </li>
+              <li>
+                Demographic Information: Covers gender, age range, and family status of the customers.
+              </li>
+            </ul>
+          </li>
+        </ul><br />
+
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+import pandas as pd
+import numpy as np 
+import pylab as pl
+import matplotlib.pyplot as plt 
+%matplotlib inline
+import scipy.optimize as opt 
+from sklearn import preprocessing 
+          </code> </deckgo-highlight-code
+        ><br /><br />
+
+
+        <h3>Methodology</h3>
+        <ol class="blog">
+          <li>
+            <strong>Data Loading and Preparation:</strong><br />
+            <ul>
+              <li>
+                Libraries for data manipulation (pandas, numpy) and visualization (matplotlib) are imported.
+              </li>
+              <li>
+                The churn dataset is loaded into a pandas DataFrame for analysis.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Exploratory Data Analysis:</strong><br />
+            <ul>
+              <li>
+                Preliminary data exploration is likely conducted to understand the dataset's structure and to summarize its main characteristics.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Model Development:</strong><br />
+            <ul>
+              <li>
+                Logistic regression is used to create a predictive model.
+              </li>
+              <li>
+                The model is trained to identify patterns that indicate potential churn.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Model Evaluation:</strong><br />
+            <ul>
+              <li>
+                A confusion matrix is used to evaluate the model's performance.
+              </li>
+              <li>
+                Classification metrics such as precision, recall, f1-score, and support are calculated for each class.
+              </li>
+              <li>
+                The evaluation provides insights into the model's ability to predict churn accurately.
+              </li>
+            </ul>
+          </li>
+        </ol><br />
+        
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+churn_df = data[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip',   'callcard', 'wireless','churn']]
+churn_df['churn'] = churn_df['churn'].astype('int')
+churn_df.head()
+          </code> </deckgo-highlight-code
+        ><br />
+
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+# The data is numeric, no need for encoding (converting cat to num)
+# lets normalise the data
+
+from sklearn.preprocessing import StandardScaler
+
+# Standardize X
+scalerX = StandardScaler()
+scalerX.fit(X)
+
+X_scaled = scalerX.transform(X) 
+X = X_scaled
+
+#print(X_scaled[0:5])
+print(X[0:5])
+          </code> </deckgo-highlight-code
+        ><br /><br />
+
+
+        <h3>Evaluation Results</h3>
+        <ul class="blog">
+          <li>
+            <strong>Confusion Matrix:</strong><br />
+            <ul>
+              <li>
+                Class 0 (Non-Churn): 31 instances with a precision of 0.93 and recall of 0.84.
+              </li>
+              <li>
+                Class 1 (Churn): 9 instances with a precision of 0.58 and recall of 0.78.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Performance Metrics:</strong> <br />
+            <ul>
+              <li>Accuracy: 82% of the instances were correctly classified.</li>
+              <li>Macro Average: Precision of 0.76, Recall of 0.81, and F1-score of 0.77.</li>
+              <li>Weighted Average: Precision of 0.85, Recall of 0.82, and F1-score of 0.83.</li>
+            </ul>
+          </li>
+        </ul><br />
+        <p>
+          The F1 score and log loss are also discussed as performance metrics, with F1 score being the harmonic average of precision and recall, and log loss measuring the performance of a classifier with output probability values between 0 and 1.
+        </p>
+        <br />
+        <deckgo-highlight-code language="py">
+          <code slot="code">
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+
+cm = confusion_matrix(y_test, y_pred)
+
+# Plot confusion matrix and save figure
+plt.figure(figsize=(8,6))
+plt.title('Confusion Matrix for Logistic Regression Model')
+plt.imshow(cm, cmap='Blues')
+
+plt.xticks([0,1], [0,1]) 
+plt.yticks([0,1], [0,1])
+
+plt.ylabel('True Label')
+plt.xlabel('Predicted Label')
+
+plt.savefig('confusion_matrix.png')
+          </code> </deckgo-highlight-code
+        ><br /><br />
+
+
+        <h3>Conclusion</h3>
+
+        <p>The logistic regression model shows reasonable accuracy in predicting customer churn. The model's strengths and limitations are reflected in the precision and recall scores for both classes. The high precision in predicting non-churn customers and the good recall in predicting churn customers suggest the model is useful for the company's objective to retain customers. However, the lower precision for churn predictions indicates room for improvement, possibly through more detailed feature engineering or alternative modeling techniques.</p>
+        <br />
+      </article>
+
+      <div class="btn">
+        <a
+          type="button"
+          target="_blank"
+          href="https://github.com/rajikudusadewale/Customer-Dismissal_Log_Regressione"
+          class="sec-btn"
+          >View project</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <small> © Raji Kudus Adewale 2023 </small>
+      <div class="footer-links">
+        <a
+          href="https://www.youtube.com/@DeDataDude"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-youtube"></i>
+        </a>
+        <a
+          href="https://instagram.com/DEDATADUDE"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a
+          href="https://tiktok.com/@dedatadude"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kudus-adewale-raji-65a400134/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:dedatadude@akraji.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+  <script src="../script.js"></script>
+  <script src="https://kit.fontawesome.com/456f9bbaa5.js" crossorigin="anonymous"></script>
+</html>

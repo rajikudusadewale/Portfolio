@@ -181,6 +181,38 @@
     url(/assets/featuredIMG/Financial\ Dashboard.jpg);
 }
 
+.cds {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/clinical-decision-support.png);
+}
+
+.csknn {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/Customer\ Segmentation\ using\ KNN.webp);
+}
+
+.log-reg {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/Logistic\ Regression.png);
+}
+
+.svm-tool {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/svm.jpg);
+}
+
 .lang2 {
   justify-content: flex-start;
 }
@@ -228,6 +260,22 @@ figcaption {
   font-size: 16px;
   line-height: 160.02%;
   color: var(--secondary);
+}
+
+th {
+  background-color: #06afd11e;
+  text-align: left;
+  padding: 5px 10px;
+  color: var(--secondary);
+}
+
+td {
+  padding: 5px 10px;
+  color: var(--secondary);
+}
+
+tr:nth-child(odd) {
+  background-color: #06afd11e;
 }
 
 
