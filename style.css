@@ -212,6 +212,16 @@ nav ul li:nth-child(3) a,
   border-bottom: 2px solid white;
 }
 
+.hero-socials {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hero-socials a i {
+  font-size: 20px;
+}
+
 .hero .left h1 {
   display: flex;
   flex-direction: column;
