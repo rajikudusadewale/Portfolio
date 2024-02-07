@@ -229,6 +229,14 @@
     url(/assets/featuredIMG/loan-personal.jpg);
 }
 
+.filter {
+  background-image: linear-gradient(
+      rgba(61, 59, 103, 0.8) 70%,
+      rgba(61, 59, 103, 0.8) 70%
+    ),
+    url(/assets/featuredIMG/filter.png);
+}
+
 .lang2 {
   justify-content: flex-start;
 }
